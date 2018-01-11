@@ -49,8 +49,4 @@
   .ui.facebook.button {
     background-color: #4060B8;
   }
-
-  .ui.segment {
-    padding: 3em;
-  }
 </style>
