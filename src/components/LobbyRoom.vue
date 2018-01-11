@@ -1,10 +1,10 @@
 <template>
   <div class="ui fluid container">
     <div class="ui middle aligned equal width stackable grid">
-      <div class="four wide column">
+      <div class="four wide column large screen only">
         <img class="leftAva" src="../assets/genji.png" alt="">
       </div>
-      <div class="center aligned eight wide column">
+      <div class="centered center aligned sixteen wide mobile sixteen wide tablet eight wide computer column">
         <h1 class="ui header">Select Room</h1>
         <button class="ui red button" @click="play">Room 1</button>
         <button class="ui orange button">Room 2</button>
@@ -19,7 +19,7 @@
         <button class="ui brown button">Room 11</button>
         <button class="ui grey button">Room 12</button>
       </div>
-      <div class="four wide column">
+      <div class="four wide column large screen only">
         <img src="../assets/ikaruga.png" alt="">
       </div>
     </div>
