@@ -28,8 +28,8 @@ const router = new Router({
       }
     },
     {
-      path: '/play',
-      name: 'Play',
+      path: '/room/:id',
+      name: 'Room',
       component: GameRoom,
       meta: {
         requiresAuth: true

@@ -42,6 +42,7 @@
               <span class="title">ISSORS</span>
             </div>
           </div>
+          <!-- <countdown date="2017-06-31 00:0000"></countdown> -->
           <!-- if -->
           <div class="row">
             <div class="column">
@@ -106,8 +107,12 @@
 </template>
 
 <script>
+  import Countdown from './Countdown.vue'
   export default {
-    name: 'GameRoom'
+    name: 'GameRoom',
+    components: {
+      Countdown:Countdown
+    }
   }
 </script>
 
