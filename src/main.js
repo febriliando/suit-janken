@@ -9,11 +9,15 @@ import VueFire from 'vuefire';
 Vue.config.productionTip = false
 Vue.use(VueFire)
 
-
-/* eslint-disable no-new */
-new Vue({
-  el: '#app',
-  router,
-  template: '<App/>',
-  components: { App }
+firebase.initializeApp(config)
+firebase.auth().onAuthStateChanged(function (user) {
+  if (!app) {
+    /* eslint-disable no-new */
+    app = new Vue({
+      el: '#app',
+      router,
+      template: '<App/>',
+      components: { App }
+    })
+  }
 })
