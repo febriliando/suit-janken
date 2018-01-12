@@ -1,6 +1,6 @@
 import { initializeApp } from 'firebase';
 
-const app = initializeApp({
+const firebase = initializeApp({
   apiKey: "AIzaSyATPh-7sZPTJyHQhKPx7MDUyCuTKvmW5Os",
   authDomain: "suit-janken.firebaseapp.com",
   databaseURL: "https://suit-janken.firebaseio.com",
@@ -9,5 +9,6 @@ const app = initializeApp({
   messagingSenderId: "540357454573"
 })
 
-export const db = app.database();
+export const db = firebase.database();
 export const userRef = db.ref('User')
+export default firebase 

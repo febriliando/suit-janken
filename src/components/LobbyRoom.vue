@@ -22,10 +22,10 @@
         <div class="row btm">
           <div class="column">
             <h1 class="ui header">Select Room</h1>
-            <button class="ui red button" @click="play">Room 1</button>
+            <button class="ui red button" @click="play(1)">Room 1</button>
             <button class="ui orange button">Room 2</button>
             <button class="ui yellow button">Room 3</button>
-            <button class="ui olive button">Room 4</button>
+            <!-- <button class="ui olive button">Room 4</button>
             <button class="ui green button">Room 5</button>
             <button class="ui teal button">Room 6</button>
             <button class="ui blue button">Room 7</button>
@@ -33,7 +33,7 @@
             <button class="ui purple button">Room 9</button>
             <button class="ui pink button">Room 10</button>
             <button class="ui brown button">Room 11</button>
-            <button class="ui grey button">Room 12</button>
+            <button class="ui grey button">Room 12</button> -->
           </div>
         </div>
 
@@ -56,11 +56,22 @@
 
 <script>
 import firebase from 'firebase'
+import {db} from '../firebase'
 export default {
   name: 'LobbyRoom',
   methods: {
-    play: function () {
-      this.$router.push('/play')
+    play: function (id) {
+      console.log(db.ref('User/User1/')['key']);
+      // console.log(firebase.auth().currentUser.displayName);
+      let facebookname = firebase.auth().currentUser.displayName
+      // db.ref('Room' + id).push({
+      //   username: facebookname,
+      //   counter:
+      // })
+      this.$router.push('/room/' + id)
+    //   setTimeout(function () {
+    //     alert("Hi Vue!");
+    // }, 3000)
     },
     logout: function () {
       firebase.auth().signOut()
