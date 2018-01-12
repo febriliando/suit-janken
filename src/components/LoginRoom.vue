@@ -37,15 +37,7 @@
         let provider = new firebase.auth.FacebookAuthProvider()
         firebase.auth().signInWithPopup(provider)
         .then(result => {
-          // This gives you a Facebook Access Token. You can use it to access the Facebook API.
-          // let token = result.credential.accessToken
-          // The signed-in user info.
-          let userInfo = {
-            name: result.user.displayName,
-            email: result.user.email,
-            photoURL: result.user.photoURL
-          }
-          console.log(userInfo)
+          // console.log(result.user)
           this.$router.replace('/')
         })
         .catch(error => {
